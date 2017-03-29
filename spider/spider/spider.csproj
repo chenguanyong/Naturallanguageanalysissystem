@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A018A933-F83E-4AC7-80E0-6B5B4490B36E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>spider</RootNamespace>
+    <AssemblyName>spider</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\database\data_domain.cs" />
+    <Compile Include="APP\database\data_interface.cs" />
+    <Compile Include="APP\database\Data_result.cs" />
+    <Compile Include="APP\database\Find_site.cs" />
+    <Compile Include="APP\database\keyword_db.cs" />
+    <Compile Include="APP\find\find.cs" />
+    <Compile Include="APP\find\net_interface.cs" />
+    <Compile Include="APP\regular\regular.cs" />
+    <Compile Include="APP\regular\RegularNew.cs" />
+    <Compile Include="APP\regular\regular_new.cs" />
+    <Compile Include="APP\retrieval\retrieval.cs" />
+    <Compile Include="APP\run\find_site.cs" />
+    <Compile Include="APP\run\KeyInfor.cs" />
+    <Compile Include="APP\run\Site_do.cs" />
+    <Compile Include="data\mydata.cs" />
+    <Compile Include="lib\error\myerror.cs" />
+    <Compile Include="lib\event\myevent.cs" />
+    <Compile Include="lib\function\html_string.cs" />
+    <Compile Include="lib\function\URL.cs" />
+    <Compile Include="lib\mysql\mysql.cs" />
+    <Compile Include="lib\mysql\mysqltra.cs" />
+    <Compile Include="lib\xml\myxml.cs" />
+    <Compile Include="model\mynodel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\myresu.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="net\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
